@@ -3,10 +3,10 @@ Run a cosine-similarity pilot on IDEOINST left/right responses.
 
 This runner intentionally stays thin. Core responsibilities live in:
 
-- dataset.py: CSV loading, topic-balanced sampling, prompt templates
-- hidden_states.py: model loading and hidden-state extraction
-- cosine_metrics.py: cosine pairing algorithms and summaries
-- analysis.py: CSV outputs and comparison plots
+- step1_dataset.py: CSV loading and topic-balanced matched sampling
+- step2_hidden_states.py: model loading and hidden-state extraction
+- step3_cosine.py: cosine pairing algorithms and summaries
+- step4_analysis.py: CSV outputs and comparison plots
 """
 
 from __future__ import annotations
@@ -19,14 +19,14 @@ from pathlib import Path
 import torch
 
 try:
-    from .analysis import (
+    from .step4_analysis import (
         plot_group_aggregated_summary,
         plot_single_template_comparison,
         write_long_csv,
         write_metadata,
         write_summary_csv,
     )
-    from .cosine_metrics import (
+    from .step3_cosine import (
         AGGREGATED_METHOD_NAME,
         MATCHED_METHOD_NAME,
         METHOD_ORDER,
@@ -38,18 +38,18 @@ try:
         compute_random_select,
         summarize_method,
     )
-    from .dataset import load_rows, prepare_rows
-    from .hidden_states import extract_vectors_for_rows, load_model_and_tokenizer
-    from .prompts import TEMPLATE_REGISTRY
+    from .step1_dataset import load_rows, prepare_rows
+    from .step2_hidden_states import extract_vectors_for_rows, load_model_and_tokenizer
+    from .prompt_templates import TEMPLATE_REGISTRY
 except ImportError:
-    from analysis import (
+    from step4_analysis import (
         plot_group_aggregated_summary,
         plot_single_template_comparison,
         write_long_csv,
         write_metadata,
         write_summary_csv,
     )
-    from cosine_metrics import (
+    from step3_cosine import (
         AGGREGATED_METHOD_NAME,
         MATCHED_METHOD_NAME,
         METHOD_ORDER,
@@ -61,9 +61,9 @@ except ImportError:
         compute_random_select,
         summarize_method,
     )
-    from dataset import load_rows, prepare_rows
-    from hidden_states import extract_vectors_for_rows, load_model_and_tokenizer
-    from prompts import TEMPLATE_REGISTRY
+    from step1_dataset import load_rows, prepare_rows
+    from step2_hidden_states import extract_vectors_for_rows, load_model_and_tokenizer
+    from prompt_templates import TEMPLATE_REGISTRY
 
 
 WORKSPACE = Path(__file__).resolve().parent

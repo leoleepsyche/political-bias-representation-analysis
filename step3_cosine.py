@@ -1,6 +1,4 @@
-"""
-Cosine similarity metrics for ideology representation experiments.
-"""
+"""Step 3: cosine similarity metrics for ideology representation experiments."""
 
 from __future__ import annotations
 

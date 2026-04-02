@@ -1,6 +1,4 @@
-"""
-CSV output and plotting helpers for ideology cosine experiments.
-"""
+"""Step 4: CSV output and plotting helpers for ideology cosine experiments."""
 
 from __future__ import annotations
 
@@ -16,7 +14,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 try:
-    from .cosine_metrics import (
+    from .step3_cosine import (
         MAIN_METHOD_ORDER,
         MATCHED_METHOD_NAME,
         METHOD_ORDER,
@@ -25,7 +23,7 @@ try:
         summarize_method,
     )
 except ImportError:
-    from cosine_metrics import (
+    from step3_cosine import (
         MAIN_METHOD_ORDER,
         MATCHED_METHOD_NAME,
         METHOD_ORDER,

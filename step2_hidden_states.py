@@ -1,6 +1,4 @@
-"""
-Hidden-state extraction helpers for ideology cosine experiments.
-"""
+"""Step 2: hidden-state extraction helpers for ideology cosine experiments."""
 
 from __future__ import annotations
 
@@ -12,9 +10,9 @@ import torch
 from tqdm import tqdm
 
 try:
-    from .prompts import get_prompt
+    from .prompt_templates import get_prompt
 except ImportError:
-    from prompts import get_prompt
+    from prompt_templates import get_prompt
 
 
 WORKSPACE = Path(__file__).resolve().parent

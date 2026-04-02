@@ -1,5 +1,5 @@
 """
-Dataset utilities for ideology cosine and generation experiments.
+Step 1: dataset utilities for ideology cosine and generation experiments.
 
 This module defines a single canonical row schema:
 - instruction_id
