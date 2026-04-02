@@ -8,3 +8,25 @@ data/template_*/
 
 .matplotlib/
 *.log
+
+# Keep the GitHub repo minimal; these files stay local only.
+app.py
+build_generation_comparison_csv.py
+build_prompt_metadata_csvs.py
+custom_49_pairs.py
+extract_ideoinst_clean.py
+generate_ideology_pilot_responses.py
+rename_summary_columns.py
+results_summary_app.py
+run_final.sh
+run_ideology_generation_batch.py
+tests/
+
+data/ideology_all.csv
+data/left.csv
+data/right.csv
+data/ideoinst_clean/ideoinst_clean_master.csv
+data/ideoinst_clean/ideoinst_raw_rows.csv
+data/ideoinst_clean/ideoinst_sampled_pairs.csv
+data/ideoinst_clean/ideoinst_sampled_rows.csv
+data/ideoinst_clean/sample_preview.txt

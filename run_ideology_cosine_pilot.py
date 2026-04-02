@@ -67,7 +67,7 @@ except ImportError:
 
 
 WORKSPACE = Path(__file__).resolve().parent
-DEFAULT_INPUT = WORKSPACE / "data" / "ideoinst_clean" / "ideoinst_sampled_rows.csv"
+DEFAULT_INPUT = WORKSPACE / "data" / "ideoinst_clean" / "ideoinst_clean_rows.csv"
 DEFAULT_OUTPUT = WORKSPACE / "outputs" / "ideology_cosine_pilot"
 DEFAULT_MODELS = [
     "Qwen/Qwen2.5-7B",
