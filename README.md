@@ -18,17 +18,17 @@ Goal: test whether prompt framing changes hidden-state separation between left a
 
 ### Trying the new dataset
 
-Run left-right ideology analysis on a new dataset.
+- [x] Run left-right ideology analysis on a new dataset.
 
 Standardize cosine similarity under:
-- all-pairs
-- random-select
-- combined reporting
+- [x] all-pairs
+- [x] random-select
+- [x] combined reporting
 
 Use consistent pair naming:
-- L-L
-- R-R
-- L-R
+- [x] L-L
+- [x] R-R
+- [x] L-R
 
 Goal: test whether ideological separation is robust under a cleaner dataset setting.
 
