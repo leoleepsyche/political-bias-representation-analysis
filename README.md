@@ -1,4 +1,4 @@
-# political_biases_meetings_gianluca
+# political-bias-representation-analysis
 
 This repository keeps the current dataset and the core pipeline for ideology cosine experiments.
 
