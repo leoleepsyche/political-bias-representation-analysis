@@ -140,11 +140,12 @@ def analyze(output_dir: Path) -> None:
 
     # ── 5. Key findings summary ────────────────────────────────────────────────
     print_section("Key Findings")
-    print(f"  Model: {master['model']}")
-    print(f"  Window size: {master['window_size']}")
-    print(f"  Selected layers (neg index): {master['selected_layers_negative_index']}")
-    left_coef = master["coef_info"].get("left", {}).get("chosen_coef", "?")
-    right_coef = master["coef_info"].get("right", {}).get("chosen_coef", "?")
+    print(f"  Model: {master.get('model', 'N/A')}")
+    print(f"  Window size: {master.get('window_size', 'N/A')}")
+    print(f"  Selected layers (neg index): {master.get('selected_layers_negative_index', 'N/A')}")
+    coef_info = master.get("coef_info", {})
+    left_coef = coef_info.get("left", {}).get("chosen_coef", "?")
+    right_coef = coef_info.get("right", {}).get("chosen_coef", "?")
     print(f"  Left coef: {left_coef}  |  Right coef: {right_coef}")
 
     # Baseline difference (replicates prior finding)
